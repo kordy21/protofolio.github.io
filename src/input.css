@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.links{
+    @apply text-gray-500 font-bold;
+}
+.links li{
+    @apply hover:text-blue-800 transition delay-100;
+}

@@ -1,12 +1,30 @@
 <script setup>
+import Navigation from "./components/Navigation/Navigation.vue";
 
-
+// const toggleDark = useToggle(isDark)
 
 </script>
 
-<template>
+<template >
+  <div class=" bg-white dark:bg-slate-800 dark:text-white xx">
+    <Navigation />
+  </div>
+</template>
   
-<style scoped>
+<style >
+.xx{
+  height: 150vh;
+}
+/* .theme-light{
+  height: 150vh;
+  background-color:var(--bg-light) ;
+  color:var(--text-black) ;
+}
+.theme-dark{
+  height: 150vh;
+  background-color:var(--bg-dark) ;
+  color:var(--text-white) ;
+} */
 /* 
 
 @media (min-width: 1024px) {
