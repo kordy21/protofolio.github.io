@@ -2,14 +2,11 @@
 import { ref } from 'vue'
 import { useDark } from '@vueuse/core'
 import SlickNavigation from './SlickNavigation.vue'
-// import SlickNavigation from '../SlickNavigation.vue'
-// import SlickNav from './SlickNav.vue'
 
 const isDark = useDark()
 
     export default {
-  components: { SlickNavigation },
-        // components: { SlickNavigation },
+        components: { SlickNavigation },
         setup(){
             
             const slicknavActive =ref(false)
@@ -32,7 +29,7 @@ const isDark = useDark()
             </div>
         </div>
         <div class="basis-3/4 hidden  lg:block ">
-            <ul class="links flex gap-6 justify-center">
+            <ul class="links flex gap-6 justify-center text-gray-600 dark:text-white">
                 <li>
                     <a href="#">HOME</a>
                 </li>
@@ -50,7 +47,7 @@ const isDark = useDark()
                 </li>
             </ul>
         </div>
-        <div class="basis-2/4 ">
+        <div class="basis-2/4 md:basis-2/5">
             <div class="text-right">
                 <div class=" justify-end items-center  hidden  lg:flex">
                     <input class="darkCheckBox " type="checkbox" v-model="isDark">
@@ -79,6 +76,14 @@ const isDark = useDark()
         width: 40px;
         border-radius: 50%;
         top: 0;
+        transform: rotate(0);
+        transition: 1s ease-in-out;
+    }
+    .nav-logo img:hover{
+        transform: rotate(360deg);
+    }
+    .links li:hover{
+        color:var(--main-color)
     }
     .darkCheckBox {
         position: relative;
@@ -107,13 +112,11 @@ const isDark = useDark()
         transform: translateX(100%);
         background-color: #fff;
     }
-    /* .active{
-        display: none;
-    }
+    /*
     .iconTheme img {
         animation: sunShine 3s infinite ease-in-out;
     }
-    @keyframes sunShine {
+    @keyframes  {
         0% {
             transform: rotate( 0deg );
         }

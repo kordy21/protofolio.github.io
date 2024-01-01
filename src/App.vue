@@ -1,5 +1,6 @@
 <script setup>
 import Navigation from "./components/Navigation/Navigation.vue";
+import NavBullets from "./components/Navigation/NavBullets.vue";
 
 // const toggleDark = useToggle(isDark)
 
@@ -7,6 +8,7 @@ import Navigation from "./components/Navigation/Navigation.vue";
 
 <template >
   <div class=" bg-white dark:bg-slate-800 dark:text-white xx">
+    <NavBullets />
     <Navigation />
   </div>
 </template>
