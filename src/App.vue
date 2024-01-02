@@ -1,6 +1,6 @@
 <script setup>
 import Navigation from "./components/Navigation/Navigation.vue";
-import NavBullets from "./components/Navigation/NavBullets.vue";
+import Home from "./components/Home/Home.vue";
 
 // const toggleDark = useToggle(isDark)
 
@@ -8,8 +8,8 @@ import NavBullets from "./components/Navigation/NavBullets.vue";
 
 <template >
   <div class=" bg-white dark:bg-slate-800 dark:text-white xx">
-    <NavBullets />
     <Navigation />
+    <Home />
   </div>
 </template>
   

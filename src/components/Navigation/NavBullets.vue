@@ -47,7 +47,7 @@
 <style>
     .nav-bullets{
      position: fixed;
-     top: 50%;
+     top: 40%;
      right: 0.5rem;
     }
     .nav-bullets ul li{

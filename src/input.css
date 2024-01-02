@@ -8,3 +8,6 @@
 .links li{
     @apply hover:text-blue-800 transition delay-100;
 }
+.link-social{
+    @apply fill-gray-700 hover:fill-white hover:duration-300 rounded-full dark:fill-white;
+}

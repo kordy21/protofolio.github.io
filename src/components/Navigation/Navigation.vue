@@ -2,11 +2,13 @@
 import { ref } from 'vue'
 import { useDark } from '@vueuse/core'
 import SlickNavigation from './SlickNavigation.vue'
+import NavBullets from './NavBullets.vue'
+import NavSocial from './NavSocial.vue'
 
 const isDark = useDark()
 
     export default {
-        components: { SlickNavigation },
+        components: { SlickNavigation ,NavBullets ,NavSocial},
         setup(){
             
             const slicknavActive =ref(false)
@@ -28,7 +30,7 @@ const isDark = useDark()
                 <img src="../../assets/images/Mohamed.jpeg" alt="Profile Photo">
             </div>
         </div>
-        <div class="basis-3/4 hidden  lg:block ">
+        <div class="basis-3/4 hidden lg:block ">
             <ul class="links flex gap-6 justify-center text-gray-600 dark:text-white">
                 <li>
                     <a href="#">HOME</a>
@@ -60,6 +62,8 @@ const isDark = useDark()
         </div>
     </nav>
     <SlickNavigation @close-nav="toggleClick" :slicknavActive="slicknavActive"/>
+    <NavBullets />
+    <NavSocial />
 </template>
 
 
