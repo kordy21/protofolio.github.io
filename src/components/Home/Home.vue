@@ -1,13 +1,13 @@
 <template>
-    <div class="container pt-20" id="home">
-        <div class="flex flex-row items-center">
-            <div class="basis-1/3">
+    <div class="container pt-28" id="home">
+        <div class="flex xl:flex-row flex-col xl:gap-5 xl:h-[620px] xl:flex-nowrap ">
+            <div class="xl:basis-1/4 ">
                 <HomeInfo />
             </div>
-            <div class="basis-1/3">
+            <div class="xl:basis-2/4">
                 <HomeImg />
             </div>
-            <div class="basis-1/3">
+            <div class="xl:basis-1/4 ">
                 <HomeLogos />
             </div>
         </div>
@@ -22,7 +22,6 @@
         components: { HomeInfo ,HomeImg,HomeLogos},
     }
 </script>
-
-<style>
-
+<style scoped>
+    
 </style>

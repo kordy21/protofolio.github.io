@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .links{
     @apply text-gray-500 font-bold;
 }
@@ -9,5 +10,5 @@
     @apply hover:text-blue-800 transition delay-100;
 }
 .link-social{
-    @apply fill-gray-700 hover:fill-white hover:duration-300 rounded-full dark:fill-white;
+    @apply fill-gray-600 hover:fill-white hover:duration-300 rounded-full dark:fill-white;
 }

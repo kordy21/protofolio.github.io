@@ -7,16 +7,20 @@ import Home from "./components/Home/Home.vue";
 </script>
 
 <template >
-  <div class=" bg-white dark:bg-slate-800 dark:text-white xx">
+  <div class=" bg-white dark:bg-slate-800 dark:text-white ">
     <Navigation />
     <Home />
   </div>
 </template>
   
 <style >
-.xx{
-  height: 150vh;
-}
+  *{
+    scroll-behavior: smooth;  
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
 /* .theme-light{
   height: 150vh;
   background-color:var(--bg-light) ;

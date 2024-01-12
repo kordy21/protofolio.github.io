@@ -27,19 +27,20 @@
 
 <script>
     export default {
-        
+           
     }
 </script>
 
-<style>
+<style scoped>
     .nav-social{
+        z-index: 25;
         position: fixed;
         left: 1rem;
         bottom: 3rem;
     }
     .nav-social ul li{
         border-radius: 50%;
-        padding: 5px;
+        padding: 0.5rem;
     }
     .nav-social ul li:hover{
         background-color: var(--main-color);

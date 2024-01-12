@@ -12,7 +12,6 @@ const isDark = useDark()
         setup(){
             
             const slicknavActive =ref(false)
-            
 
             const toggleClick=()=>{
                 slicknavActive.value=!slicknavActive.value
@@ -23,11 +22,11 @@ const isDark = useDark()
     }
 </script>
 <template>
-    <nav class="px-10 flex flex-row h-3 py-10 font-bold items-center bg-transparent bg-opacity-55 fixed top-0 w-full">
+    <nav class="px-10 flex flex-row h-3 py-10 font-bold items-center bg-transparent bg-opacity-55 fixed top-0 w-full z-30 backdrop-blur-sm">
         <div class="basis-2/4 md:basis-2/5 ">
             <div class="nav-logo">
-                <span class="text-2xl mr-6">MOHAM<span class="text-color">ED</span></span>
-                <img src="../../assets/images/Mohamed.jpeg" alt="Profile Photo">
+                <span ref="name" class="text-2xl mr-6">MOHAM<span class="text-color">ED</span></span>
+                <img class="hidden sm:inline-block" src="../../assets/images/Mohamed.jpeg" alt="Profile Photo">
             </div>
         </div>
         <div class="basis-3/4 hidden lg:block ">
@@ -67,7 +66,7 @@ const isDark = useDark()
 </template>
 
 
-<style>
+<style scoped>
     .text-color{
         color:var(--main-color)
     }
@@ -76,7 +75,6 @@ const isDark = useDark()
     }
     .nav-logo img{
         height: 40px;
-        display: inline-block;
         width: 40px;
         border-radius: 50%;
         top: 0;

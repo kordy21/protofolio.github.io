@@ -19,7 +19,11 @@ export default {
       screens:{
         sm:"640px",
         md:"768px",
-        lg:"992px"
+        lg:"992px",
+        xl:"1200px"
+      },
+      minHeight:{
+        "128":"32rem"
       }
 
     },

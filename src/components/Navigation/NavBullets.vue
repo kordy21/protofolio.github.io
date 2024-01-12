@@ -44,9 +44,10 @@
 
 </script>
 
-<style>
+<style scoped>
     .nav-bullets{
      position: fixed;
+     z-index: 25;
      top: 40%;
      right: 0.5rem;
     }
