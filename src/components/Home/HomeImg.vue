@@ -1,6 +1,6 @@
 <template>
     <div class="relative xl:h-full flex justify-center">
-        <img class="z-10" src="../../assets/images/profile.ee489764521abe34026b.png" alt="">
+        <img class="z-10" src="../../assets/images/profile.ee489764521abe34026b.png" alt="home image">
         <svg class="absolute top-10 xl:top-16 z-0 w-full" width="511" height="511" viewBox="0 0 511 511" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="255.5" cy="255.5" r="255.5" fill="url(#paint0_linear_615_28)"/>
             <defs>

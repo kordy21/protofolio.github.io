@@ -1,38 +1,10 @@
 <template>
     <div class="nav-bullets">
         <ul class="flex flex-col gap-4">
-            <li class="">
-                <a href="#">
-                    <div class="tooltip">
-                        Home 
-                    </div>
-                </a>
-            </li>
-            <li class="">
-                <a href="#">
-                    <div class="tooltip">
-                        About My 
-                    </div>
-                </a>
-            </li>
-            <li class="">
-                <a href="#">
-                    <div class="tooltip">
-                        Work 
-                    </div>
-                </a>
-            </li>
-            <li class="">
-                <a href="#">
-                    <div class="tooltip">
-                        Skills 
-                    </div>
-                </a>
-            </li>
-            <li class="">
-                <a href="#">
-                    <div class="tooltip">
-                        Contact 
+            <li  class="" v-for="link in linksList" :key="link.index">
+                <a :href=link.url>
+                    <div class="tooltip uppercase">
+                        {{link.text}} 
                     </div>
                 </a>
             </li>
@@ -40,8 +12,10 @@
     </div>
 </template>
 
-<script>
+<script setup>
+    import { defineProps } from 'vue'
 
+    const props = defineProps(["linksList"]) 
 </script>
 
 <style scoped>

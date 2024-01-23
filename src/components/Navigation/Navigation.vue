@@ -1,50 +1,38 @@
-<script>
-import { ref } from 'vue'
-import { useDark } from '@vueuse/core'
-import SlickNavigation from './SlickNavigation.vue'
-import NavBullets from './NavBullets.vue'
-import NavSocial from './NavSocial.vue'
+<script setup>
+    import { ref } from 'vue'
+    import { useDark } from '@vueuse/core'
+    import SlickNavigation from './SlickNavigation.vue'
+    import NavBullets from './NavBullets.vue'
+    import NavSocial from './NavSocial.vue'
 
-const isDark = useDark()
+    const isDark = useDark()
+    
+    const linksList=[
+                        {"text":"home" ,"url":"#home"} ,
+                        {"text":"about","url":"#about"} ,
+                        {"text":"work","url":"#work"} ,
+                        {"text":"skills","url":"#skills"} ,
+                        {"text":"contact","url":"#contact"} 
+                    ] 
 
-    export default {
-        components: { SlickNavigation ,NavBullets ,NavSocial},
-        setup(){
-            
-            const slicknavActive =ref(false)
+    const slicknavActive =ref(false)
 
-            const toggleClick=()=>{
-                slicknavActive.value=!slicknavActive.value
-            }
-            
-            return{isDark,slicknavActive,toggleClick}
-        }
+    const toggleClick=()=>{
+        slicknavActive.value=!slicknavActive.value
     }
 </script>
 <template>
     <nav class="px-10 flex flex-row h-3 py-10 font-bold items-center bg-transparent bg-opacity-55 fixed top-0 w-full z-30 backdrop-blur-sm">
         <div class="basis-2/4 md:basis-2/5 ">
             <div class="nav-logo">
-                <span ref="name" class="text-2xl mr-6">MOHAM<span class="text-color">ED</span></span>
+                <span ref="name" class="text-2xl mr-6">MOHAM<span class="main-color">ED</span></span>
                 <img class="hidden sm:inline-block" src="../../assets/images/Mohamed.jpeg" alt="Profile Photo">
             </div>
         </div>
         <div class="basis-3/4 hidden lg:block ">
             <ul class="links flex gap-6 justify-center text-gray-600 dark:text-white">
-                <li>
-                    <a href="#">HOME</a>
-                </li>
-                <li>
-                    <a href="#">ABOUT</a>
-                </li>
-                <li>
-                    <a href="#">WORK</a>
-                </li>
-                <li>
-                    <a href="#">SKILLS</a>
-                </li>
-                <li>
-                    <a href="#">CONTACT</a>
+                <li v-for=" link in linksList" :key="link.index">
+                    <a :href=link.url class="uppercase">{{link.text}}</a>
                 </li>
             </ul>
         </div>
@@ -60,16 +48,13 @@ const isDark = useDark()
             </div>
         </div>
     </nav>
-    <SlickNavigation @close-nav="toggleClick" :slicknavActive="slicknavActive"/>
-    <NavBullets />
+    <SlickNavigation @close-slick-nav="toggleClick" :linksList="linksList" :slicknavActive="slicknavActive"/>
+    <NavBullets :linksList="linksList"/>
     <NavSocial />
 </template>
 
 
 <style scoped>
-    .text-color{
-        color:var(--main-color)
-    }
     .nav-logo span{
         line-height: 50px;
     }

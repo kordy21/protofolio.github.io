@@ -6,11 +6,11 @@ export default {
   theme: {
     extend: {
       colors:{
-        
+
         
       },
       container:{
-        padding:"1rem",
+        padding:"4.25rem",
         center:true,
       },
       fontFamily:{

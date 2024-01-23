@@ -1,15 +1,23 @@
 <script setup>
 import Navigation from "./components/Navigation/Navigation.vue";
 import Home from "./components/Home/Home.vue";
+import About from "./components/About.vue";
+import Work from "./components/Work.vue";
 
 // const toggleDark = useToggle(isDark)
 
 </script>
 
 <template >
-  <div class=" bg-white dark:bg-slate-800 dark:text-white ">
+  <div class="font-Roboto bg-white dark:bg-slate-800 dark:text-white ">
     <Navigation />
     <Home />
+    <div class="pt-10">
+      <About />
+    </div>
+    <div class="pt-10">
+      <Work />
+    </div>
   </div>
 </template>
   
@@ -20,6 +28,9 @@ import Home from "./components/Home/Home.vue";
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+  }
+  .main-color{
+    color: var(--main-color);
   }
 /* .theme-light{
   height: 150vh;
