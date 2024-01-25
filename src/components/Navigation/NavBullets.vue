@@ -1,7 +1,7 @@
 <template>
     <div class="nav-bullets">
         <ul class="flex flex-col gap-4">
-            <li  class="" v-for="link in linksList" :key="link.index">
+            <li  class="" v-for="link in linksList.links" :key="link.id">
                 <a :href=link.url>
                     <div class="tooltip uppercase">
                         {{link.text}} 
@@ -13,9 +13,11 @@
 </template>
 
 <script setup>
-    import { defineProps } from 'vue'
 
-    const props = defineProps(["linksList"]) 
+    import { useLinkStore } from '@/stores/data';
+
+    const linksList =useLinkStore()
+
 </script>
 
 <style scoped>
@@ -57,4 +59,4 @@
     .nav-bullets ul li:hover a{
         background-color: var(--main-color);
     }
-</style>
+</style>@/stores/data

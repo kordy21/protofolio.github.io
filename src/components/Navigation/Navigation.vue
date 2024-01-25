@@ -4,17 +4,11 @@
     import SlickNavigation from './SlickNavigation.vue'
     import NavBullets from './NavBullets.vue'
     import NavSocial from './NavSocial.vue'
-
+    import { useLinkStore } from '@/stores/data'
+    
     const isDark = useDark()
     
-    const linksList=[
-                        {"text":"home" ,"url":"#home"} ,
-                        {"text":"about","url":"#about"} ,
-                        {"text":"work","url":"#work"} ,
-                        {"text":"skills","url":"#skills"} ,
-                        {"text":"contact","url":"#contact"} 
-                    ] 
-
+    const linksList=useLinkStore()
     const slicknavActive =ref(false)
 
     const toggleClick=()=>{
@@ -31,7 +25,7 @@
         </div>
         <div class="basis-3/4 hidden lg:block ">
             <ul class="links flex gap-6 justify-center text-gray-600 dark:text-white">
-                <li v-for=" link in linksList" :key="link.index">
+                <li v-for=" link in linksList.links" :key="link.id">
                     <a :href=link.url class="uppercase">{{link.text}}</a>
                 </li>
             </ul>
@@ -48,8 +42,8 @@
             </div>
         </div>
     </nav>
-    <SlickNavigation @close-slick-nav="toggleClick" :linksList="linksList" :slicknavActive="slicknavActive"/>
-    <NavBullets :linksList="linksList"/>
+    <SlickNavigation @close-slick-nav="toggleClick" :slicknavActive="slicknavActive"/>
+    <NavBullets />
     <NavSocial />
 </template>
 
@@ -112,4 +106,4 @@
         }
     }; */
 
-</style>
+</style>@/stores/data.js
